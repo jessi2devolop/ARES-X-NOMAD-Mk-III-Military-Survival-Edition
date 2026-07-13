@@ -1,8 +1,8 @@
 {
-  "name": "ares-x-nomad-3d-showcase",
-  "version": "1.0.0",
+  "name": "ares-x-nomad-mk-iii-realistic",
+  "version": "2.0.0",
   "private": true,
-  "description": "Interactive Three.js showcase for the ARES-X NOMAD survival vehicle.",
+  "description": "Cinematic Three.js showcase for the ARES-X NOMAD Mk III survival vehicle.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
