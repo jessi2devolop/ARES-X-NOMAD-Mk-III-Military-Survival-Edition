@@ -1,0 +1,14 @@
+{
+  "name": "ares-x-nomad-3d-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive Three.js showcase for the ARES-X NOMAD survival vehicle.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "open": "^10.1.0"
+  }
+}

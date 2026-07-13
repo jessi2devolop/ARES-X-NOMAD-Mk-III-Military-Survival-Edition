@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07100d" />
+  <title>ARES-X NOMAD | 3D Survival Vehicle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loading" class="loading-screen">
+    <div class="loader-ring"></div>
+    <p>INITIALIZING NOMAD SYSTEMS</p>
+  </div>
+
+  <canvas id="scene"></canvas>
+  <div class="noise"></div>
+
+  <header class="topbar glass">
+    <div>
+      <div class="eyebrow">MOBILE SURVIVAL PLATFORM</div>
+      <h1>ARES-X <span>NOMAD</span></h1>
+    </div>
+    <div class="system-status"><span></span> SYSTEM ONLINE</div>
+  </header>
+
+  <aside class="left-panel glass">
+    <h2>Vehicle modes</h2>
+    <button class="mode active" data-mode="diesel">DIESEL HYBRID</button>
+    <button class="mode" data-mode="ev">SILENT EV</button>
+    <button class="mode" data-mode="amphibious">AMPHIBIOUS</button>
+    <button class="mode" data-mode="night">NIGHT OPS</button>
+
+    <div class="separator"></div>
+    <h2>Scene controls</h2>
+    <label class="toggle-row"><input id="autoRotate" type="checkbox" checked><span>Auto rotate</span></label>
+    <label class="toggle-row"><input id="doors" type="checkbox"><span>Open side doors</span></label>
+    <label class="toggle-row"><input id="solar" type="checkbox"><span>Deploy solar wings</span></label>
+    <label class="toggle-row"><input id="drone" type="checkbox"><span>Launch recon drone</span></label>
+    <button id="resetView" class="outline">RESET CAMERA</button>
+  </aside>
+
+  <section class="specs glass">
+    <div class="spec"><strong>6×6</strong><span>Independent drive</span></div>
+    <div class="spec"><strong>HYBRID</strong><span>Diesel + electric</span></div>
+    <div class="spec"><strong>1800 KM</strong><span>Combined range</span></div>
+    <div class="spec"><strong>AMPHIBIOUS</strong><span>Water-jet propulsion</span></div>
+  </section>
+
+  <section class="info-card glass">
+    <div class="info-text">
+      <div class="eyebrow">TACTICAL OVERVIEW</div>
+      <h2 id="modeTitle">Diesel Hybrid Mode</h2>
+      <p id="modeText">Long-range travel with the diesel generator supporting electric wheel motors. Best for rough terrain and extended missions.</p>
+    </div>
+    <img src="assets/vehicle-reference.png" alt="ARES-X reference concept" />
+  </section>
+
+  <div class="help glass">Drag to rotate · Scroll to zoom · Right-drag to pan</div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
